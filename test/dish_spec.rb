@@ -1,3 +1,6 @@
+require 'rspec'
+require './lib/dish'
+
 describe Dish do 
   describe '#initialize'
     it 'is an instance of Dish' do

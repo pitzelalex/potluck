@@ -20,7 +20,7 @@ class Potluck
     @dishes.each { |dish| categories << dish.category unless categories.include?(dish.category) }
     categories.each do |cat_id|
       selected = @dishes.select { |selected_dish| selected_dish.category == cat_id }
-      menu[cat_id] = selected.map { |select| select.name }.sort
+      menu[(cat_id.to_s + "s").to_sym] = selected.map { |select| select.name }.sort
     end
     return menu
   end

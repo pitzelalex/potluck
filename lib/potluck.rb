@@ -24,4 +24,8 @@ class Potluck
     end
     return menu
   end
+
+  def ratio(cat_id)
+    ((dishes.count { |dish| dish.category == cat_id} / dishes.count.to_f) * 100).round(1)
+  end
 end

@@ -22,4 +22,16 @@ describe Potluck do
       expect(potluck.dishes).to eq([])
     end
   end
+
+  describe '#add_dish' do
+    it 'adds new dishes to dishes array' do
+      potluck = Potluck.new("7-13-18")
+      couscous_salad = Dish.new("Couscous Salad", :appetizer)
+      cocktail_meatballs = Dish.new("Cocktail Meatballs", :entre)
+      potluck.add_dish(couscous_salad)
+      potluck.add_dish(cocktail_meatballs)
+
+      expect(dishes).to eq([couscous_salad, cocktail_meatballs])
+    end
+  end
 end

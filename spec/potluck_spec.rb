@@ -15,5 +15,11 @@ describe Potluck do
 
       expect(potluck.date).to eq("7-13-18")
     end
+
+    it 'has an array of dishes' do
+      potluck = Potluck.new("7-13-18")
+
+      expect(potluck.dishes).to eq([])
+    end
   end
 end

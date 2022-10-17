@@ -2,7 +2,7 @@ require 'rspec'
 require './lib/dish'
 
 describe Dish do 
-  describe '#initialize'
+  describe '#initialize' do
     it 'is an instance of Dish' do
       dish = Dish.new("Couscous Salad", :appetizer)
 

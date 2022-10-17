@@ -13,4 +13,15 @@ class Potluck
   def get_all_from_category(cat_id)
     @dishes.select { |dish| dish.category == cat_id}
   end
+
+  def menu
+    menu = {}
+    categories = []
+    @dishes.each { |dish| categories << dish.category unless categories.include?(dish.category) }
+    categories.each do |cat_id|
+      selected = @dishes.select { |selected_dish| selected_dish.category == cat_id }
+      menu[cat_id] = selected.map { |select| select.name }.sort
+    end
+    return menu
+  end
 end
